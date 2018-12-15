@@ -39,7 +39,7 @@
 		"chalk": "^2.3.2",
 		"log-symbols": "^2.2.0",
 		"meow": "^5.0.0",
-		"npm-name": "^5.0.0",
+		"npm-name": "laggingreflex/npm-name",
 		"ora": "3.0.0",
 		"squatter": "^0.2.0",
 		"terminal-link": "^1.0.0"
