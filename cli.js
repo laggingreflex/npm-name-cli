@@ -55,7 +55,12 @@ const spinner = ora(`Checking ${input.length === 1 ? 'name' : 'names'} on npmjs.
 		const ret = {name, isAvailable};
 
 		if (!isAvailable) {
-			ret.isSquatter = await squatter(name);
+			ret.isSquatter = await squatter(name).catch(error => {
+				if (error.message.includes('doesn\'t exist')) {
+					return false;
+				}
+				throw error;
+			});
 		}
 
 		return ret;
